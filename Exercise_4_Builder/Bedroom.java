@@ -35,7 +35,7 @@ public class Bedroom {
     }
 
     // Inner Builder class
-    public static class BedroomBuilder {
+    public static class BedroomBuilder implements RoomBuilder {
         // Thuộc tính bắt buộc
         private int floor;
         private double area;
@@ -48,42 +48,47 @@ public class Bedroom {
         private boolean hasBathroom = false;
         private String furnitureStyle = "Hiện đại";
 
-        // Constructor bắt buộc: tầng và diện tích
-        public BedroomBuilder(int floor, double area) {
+        public BedroomBuilder floor(int floor) {
             this.floor = floor;
-            this.area = area;
+            return this;
         }
 
-        public BedroomBuilder withWallColor(String wallColor) {
+        public BedroomBuilder area(double area) {
+            this.area = area;
+            return this;
+        }
+
+        public BedroomBuilder wallColor(String wallColor) {
             this.wallColor = wallColor;
             return this;
         }
 
-        public BedroomBuilder withBedSize(String bedSize) {
+        public BedroomBuilder bedSize(String bedSize) {
             this.bedSize = bedSize;
             return this;
         }
 
-        public BedroomBuilder withWindowCount(int windowCount) {
+        public BedroomBuilder windowCount(int windowCount) {
             this.windowCount = windowCount;
             return this;
         }
 
-        public BedroomBuilder withBalcony(boolean hasBalcony) {
+        public BedroomBuilder balcony(boolean hasBalcony) {
             this.hasBalcony = hasBalcony;
             return this;
         }
 
-        public BedroomBuilder withBathroom(boolean hasBathroom) {
+        public BedroomBuilder bathroom(boolean hasBathroom) {
             this.hasBathroom = hasBathroom;
             return this;
         }
 
-        public BedroomBuilder withFurnitureStyle(String furnitureStyle) {
+        public BedroomBuilder furnitureStyle(String furnitureStyle) {
             this.furnitureStyle = furnitureStyle;
             return this;
         }
 
+        @Override
         public Bedroom build() {
             return new Bedroom(this);
         }

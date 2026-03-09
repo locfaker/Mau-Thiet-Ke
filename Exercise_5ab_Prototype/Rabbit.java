@@ -1,35 +1,34 @@
-public class Rabbit implements Cloneable {
+public class Rabbit implements Prototype<Rabbit> {
     private String name;
     private int age;
     private Person owner; // Bài 5b: mutable object
 
-    // Constructor bài 5a (không có owner)
     public Rabbit(String name, int age) {
         this.name = name;
         this.age = age;
         this.owner = null;
     }
 
-    // Constructor bài 5b (có owner)
     public Rabbit(String name, int age, Person owner) {
         this.name = name;
         this.age = age;
         this.owner = owner;
     }
 
-    // Deep clone: tạo bản sao mới cho cả Person owner
+    // COPY CONSTRUCTOR: Cách làm của bài mẫu Git
+    // Giúp thực hiện Deep Copy sạch sẽ hơn dùng super.clone()
+    private Rabbit(Rabbit other) {
+        this.name = other.name;
+        this.age = other.age;
+        // Thực hiện Deep Copy cho Person owner nếu có
+        if (other.owner != null) {
+            this.owner = new Person(other.owner); 
+        }
+    }
+
     @Override
     public Rabbit clone() {
-        try {
-            Rabbit cloned = (Rabbit) super.clone();
-            // Deep copy: tạo Person mới để tránh shallow copy
-            if (this.owner != null) {
-                cloned.owner = new Person(this.owner);
-            }
-            return cloned;
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException(e);
-        }
+        return new Rabbit(this); // Gọi copy constructor
     }
 
     public void setName(String name) {
