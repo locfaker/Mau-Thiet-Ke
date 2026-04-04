@@ -1,0 +1,133 @@
+<mxfile host="app.diagrams.net" modified="2026-04-04T00:00:00.000Z" agent="Codex" version="29.3.8">
+  <diagram id="decorator" name="UML Decorator">
+    <mxGraphModel dx="1600" dy="900" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="decoratorClient" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="170" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="canvas" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Canvas&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="235" width="220" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="component" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Component&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=42;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="60" width="240" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="circleDeco" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Circle&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="455" width="220" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="baseDecorator" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;i&gt;&lt;b&gt;ComponentWithRedBorder&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=42;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="235" width="370" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="circleBorder" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CircleWithRedBorder&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="840" y="455" width="260" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="decoratorNote" value="component.draw()&lt;br/&gt;drawRedBorder()" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Times New Roman;rounded=0;shadow=0;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8" vertex="1" parent="1">
+          <mxGeometry x="860" y="240" width="200" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="client_canvas" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=0.5;exitY=1;exitPerimeter=1;entryX=0.5;entryY=0;entryPerimeter=1;" edge="1" parent="1" source="decoratorClient" target="canvas">
+          <mxGeometry relative="1" as="geometry">
+
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="canvas_component" value="component" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=1;exitY=0.35;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="canvas" target="component">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="circle_component" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=block;endFill=0;endSize=18;startArrow=none;startFill=0;startSize=14;exitX=0.5;exitY=0;exitPerimeter=1;entryX=0.2;entryY=1;entryPerimeter=1;" edge="1" parent="1" source="circleDeco" target="component">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="360" />
+              <mxPoint x="538" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="base_component" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=block;endFill=0;endSize=18;startArrow=none;startFill=0;startSize=14;exitX=0.5;exitY=0;exitPerimeter=1;entryX=0.5;entryY=1;entryPerimeter=1;" edge="1" parent="1" source="baseDecorator" target="component">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="605" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="circleborder_extends" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=block;endFill=0;endSize=18;startArrow=none;startFill=0;startSize=14;exitX=0.5;exitY=0;exitPerimeter=1;entryX=0.8;entryY=1;entryPerimeter=1;" edge="1" parent="1" source="circleBorder" target="baseDecorator">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="970" y="390" />
+              <mxPoint x="716" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="base_component_assoc" value="component" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=0;endArrow=open;endFill=0;endSize=14;startArrow=diamondThin;startFill=0;startSize=14;exitX=1;exitY=0.2;exitPerimeter=1;entryX=1;entryY=0.7;entryPerimeter=1;" edge="1" parent="1" source="baseDecorator" target="component">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="140" />
+              <mxPoint x="735" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="decorator_note_link" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=none;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=0.55;exitY=0;exitPerimeter=1;entryX=0.4;entryY=1;entryPerimeter=1;" edge="1" parent="1" source="circleBorder" target="decoratorNote">
+          <mxGeometry relative="1" as="geometry">
+
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="decoratorClient_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="decoratorClient">
+          <mxGeometry x="0" y="30" width="170" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="decoratorClient_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="decoratorClient">
+          <mxGeometry x="0" y="48" width="170" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="decoratorClient_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ main(args: String[]): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="decoratorClient">
+          <mxGeometry x="0" y="48" width="170" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="canvas_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="canvas">
+          <mxGeometry x="0" y="30" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="canvas_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="canvas">
+          <mxGeometry x="0" y="48" width="220" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="canvas_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ paint(component: Component): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="canvas">
+          <mxGeometry x="0" y="48" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="component_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="component">
+          <mxGeometry x="0" y="42" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="component_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="component">
+          <mxGeometry x="0" y="60" width="240" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="component_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ draw(): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="component">
+          <mxGeometry x="0" y="60" width="240" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="circleDeco_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="circleDeco">
+          <mxGeometry x="0" y="30" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="circleDeco_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="circleDeco">
+          <mxGeometry x="0" y="48" width="220" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="circleDeco_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ draw(): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="circleDeco">
+          <mxGeometry x="0" y="48" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="baseDecorator_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;- component: Component&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="baseDecorator">
+          <mxGeometry x="0" y="42" width="370" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="baseDecorator_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="baseDecorator">
+          <mxGeometry x="0" y="66" width="370" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="baseDecorator_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ ComponentWithRedBorder(component: Component)&lt;br/&gt;+ draw(): void&lt;br/&gt;# drawRedBorder(): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="baseDecorator">
+          <mxGeometry x="0" y="66" width="370" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="circleBorder_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="circleBorder">
+          <mxGeometry x="0" y="30" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="circleBorder_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="circleBorder">
+          <mxGeometry x="0" y="48" width="260" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="circleBorder_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ CircleWithRedBorder(component: Component)&lt;br/&gt;+ draw(): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="circleBorder">
+          <mxGeometry x="0" y="48" width="260" height="44" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

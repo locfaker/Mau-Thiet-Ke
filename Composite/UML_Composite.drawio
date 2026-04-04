@@ -1,0 +1,124 @@
+<mxfile host="app.diagrams.net" modified="2026-04-04T00:00:00.000Z" agent="Codex" version="29.3.8">
+  <diagram id="composite" name="UML Composite">
+    <mxGraphModel dx="1600" dy="900" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="compositeClient" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="180" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="payee" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Payee&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=42;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="60" width="260" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="manager" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Manager&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="308" width="250" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="salesperson" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Salesperson&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="300" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="salesTeam" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SalesTeam&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="850" y="300" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="compositeNote" value="foreach manager&lt;br/&gt;manager.payExpenses(amount)&lt;br/&gt;foreach salesperson&lt;br/&gt;salesperson.payExpenses(amount)" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Times New Roman;rounded=0;shadow=0;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8" vertex="1" parent="1">
+          <mxGeometry x="900" y="500" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="client_payee" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="compositeClient" target="payee">
+          <mxGeometry relative="1" as="geometry">
+
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="manager_impl" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=block;endFill=0;endSize=18;startArrow=none;startFill=0;startSize=14;exitX=0.5;exitY=0;exitPerimeter=1;entryX=0.2;entryY=1;entryPerimeter=1;" edge="1" parent="1" source="manager" target="payee">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="235" y="235" />
+              <mxPoint x="492" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sales_impl" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=block;endFill=0;endSize=18;startArrow=none;startFill=0;startSize=14;exitX=0.5;exitY=0;exitPerimeter=1;entryX=0.5;entryY=1;entryPerimeter=1;" edge="1" parent="1" source="salesperson" target="payee">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="225" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="team_impl" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=block;endFill=0;endSize=18;startArrow=none;startFill=0;startSize=14;exitX=0.5;exitY=0;exitPerimeter=1;entryX=0.8;entryY=1;entryPerimeter=1;" edge="1" parent="1" source="salesTeam" target="payee">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1005" y="215" />
+              <mxPoint x="648" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sales_manager_assoc" value="manager" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=0;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=0;exitY=0.5;exitPerimeter=1;entryX=1;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="salesperson" target="manager">
+          <mxGeometry relative="1" as="geometry">
+
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="team_managers" value="managers 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=0;endArrow=open;endFill=0;endSize=14;startArrow=diamondThin;startFill=0;startSize=14;exitX=0;exitY=0.75;exitPerimeter=1;entryX=1;entryY=0.75;entryPerimeter=1;" edge="1" parent="1" source="salesTeam" target="manager">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="440" />
+              <mxPoint x="360" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="team_salespersons" value="salespersons 0..*" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=0;endArrow=open;endFill=0;endSize=14;startArrow=diamondThin;startFill=0;startSize=14;exitX=0;exitY=0.5;exitPerimeter=1;entryX=1;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="salesTeam" target="salesperson">
+          <mxGeometry relative="1" as="geometry">
+
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="composite_note_link" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=none;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=0.75;exitY=1;exitPerimeter=1;entryX=0.4;entryY=0;entryPerimeter=1;" edge="1" parent="1" source="salesTeam" target="compositeNote">
+          <mxGeometry relative="1" as="geometry">
+
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="compositeClient_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="compositeClient">
+          <mxGeometry x="0" y="30" width="180" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="compositeClient_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="compositeClient">
+          <mxGeometry x="0" y="48" width="180" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="compositeClient_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ main(args: String[]): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="compositeClient">
+          <mxGeometry x="0" y="48" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="payee_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="payee">
+          <mxGeometry x="0" y="42" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="payee_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="payee">
+          <mxGeometry x="0" y="60" width="260" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="payee_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ payExpenses(amount: int): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="payee">
+          <mxGeometry x="0" y="60" width="260" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="manager_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;- name: String&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="manager">
+          <mxGeometry x="0" y="30" width="250" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="manager_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="manager">
+          <mxGeometry x="0" y="54" width="250" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="manager_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ Manager(name: String)&lt;br/&gt;+ payExpenses(amount: int): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="manager">
+          <mxGeometry x="0" y="54" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="salesperson_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;- manager: Manager&lt;br/&gt;- name: String&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="salesperson">
+          <mxGeometry x="0" y="30" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="salesperson_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="salesperson">
+          <mxGeometry x="0" y="70" width="300" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="salesperson_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ Salesperson(name: String, manager: Manager)&lt;br/&gt;+ payExpenses(amount: int): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="salesperson">
+          <mxGeometry x="0" y="70" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="salesTeam_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;- managers: List&amp;lt;Manager&amp;gt;&lt;br/&gt;- salespersons: List&amp;lt;Salesperson&amp;gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="salesTeam">
+          <mxGeometry x="0" y="30" width="310" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="salesTeam_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="salesTeam">
+          <mxGeometry x="0" y="70" width="310" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="salesTeam_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ SalesTeam(managers: List&amp;lt;Manager&amp;gt;, salespersons: List&amp;lt;Salesperson&amp;gt;)&lt;br/&gt;+ payExpenses(amount: int): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="salesTeam">
+          <mxGeometry x="0" y="70" width="310" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

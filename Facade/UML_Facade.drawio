@@ -1,0 +1,101 @@
+<mxfile host="app.diagrams.net" modified="2026-04-04T00:00:00.000Z" agent="Codex" version="29.3.8">
+  <diagram id="facade" name="UML Facade">
+    <mxGraphModel dx="1600" dy="900" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="subsystemFrame" value="Subsystem" style="whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;fontStyle=1;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8" vertex="1" parent="1">
+          <mxGeometry x="290" y="325" width="680" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="facadeClient" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="85" width="170" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="vacationFacade" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;VacationFacade&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="60" width="330" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="carRental" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CarRental&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="405" width="190" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="flight" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Flight&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="405" width="160" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="hotel" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Hotel&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="780" y="405" width="160" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="client_facade" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="facadeClient" target="vacationFacade">
+          <mxGeometry relative="1" as="geometry">
+
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="facade_car" value="carRental" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=0;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=0.25;exitY=1;exitPerimeter=1;entryX=0.5;entryY=0;entryPerimeter=1;" edge="1" parent="1" source="vacationFacade" target="carRental">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="533" y="300" />
+              <mxPoint x="425" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="facade_flight" value="flight" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=0;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=0.5;exitY=1;exitPerimeter=1;entryX=0.5;entryY=0;entryPerimeter=1;" edge="1" parent="1" source="vacationFacade" target="flight">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="615" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="facade_hotel" value="hotel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=0;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=0.75;exitY=1;exitPerimeter=1;entryX=0.5;entryY=0;entryPerimeter=1;" edge="1" parent="1" source="vacationFacade" target="hotel">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="698" y="300" />
+              <mxPoint x="860" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="facadeClient_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="facadeClient">
+          <mxGeometry x="0" y="30" width="170" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="facadeClient_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="facadeClient">
+          <mxGeometry x="0" y="48" width="170" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="facadeClient_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ main(args: String[]): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="facadeClient">
+          <mxGeometry x="0" y="48" width="170" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="vacationFacade_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&lt;u&gt;- INSTANCE: VacationFacade&lt;/u&gt;&lt;br/&gt;- carRental: CarRental&lt;br/&gt;- hotel: Hotel&lt;br/&gt;- flight: Flight&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="vacationFacade">
+          <mxGeometry x="0" y="30" width="330" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="vacationFacade_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="vacationFacade">
+          <mxGeometry x="0" y="102" width="330" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vacationFacade_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;- VacationFacade()&lt;br/&gt;&lt;u&gt;+ getINSTANCE(): VacationFacade&lt;/u&gt;&lt;br/&gt;+ bookVacation(): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="vacationFacade">
+          <mxGeometry x="0" y="102" width="330" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="carRental_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="carRental">
+          <mxGeometry x="0" y="30" width="190" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="carRental_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="carRental">
+          <mxGeometry x="0" y="48" width="190" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="carRental_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ bookCar(): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="carRental">
+          <mxGeometry x="0" y="48" width="190" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="flight_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="flight">
+          <mxGeometry x="0" y="30" width="160" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="flight_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="flight">
+          <mxGeometry x="0" y="48" width="160" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flight_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ bookFlight(): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="flight">
+          <mxGeometry x="0" y="48" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="hotel_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="hotel">
+          <mxGeometry x="0" y="30" width="160" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="hotel_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="hotel">
+          <mxGeometry x="0" y="48" width="160" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hotel_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ bookRoom(): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="hotel">
+          <mxGeometry x="0" y="48" width="160" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

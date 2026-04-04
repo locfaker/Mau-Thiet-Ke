@@ -1,0 +1,119 @@
+<mxfile host="app.diagrams.net" modified="2026-04-04T00:00:00.000Z" agent="Codex" version="29.3.8">
+  <diagram id="virtual-proxy" name="UML Virtual Proxy">
+    <mxGraphModel dx="1600" dy="900" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="proxyClient" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="70" width="170" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="gallery" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ImageGallery&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="235" width="230" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="displayObject" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;DisplayObject&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=42;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="60" width="270" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="imageFile" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ImageFile&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="320" width="255" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="imageProxy" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ImageProxy&lt;/b&gt;&lt;/p&gt;" style="swimlane;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;rounded=0;shadow=0;fontSize=12;fontFamily=Times New Roman;horizontal=1;startSize=30;collapsible=0;recursiveResize=0;" vertex="1" parent="1">
+          <mxGeometry x="730" y="320" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="proxyNote" value="if imageFile == null&lt;br/&gt;imageFile = new ImageFile(imagePath)&lt;br/&gt;imageFile.display()" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;fontFamily=Times New Roman;rounded=0;shadow=0;align=left;verticalAlign=top;spacingTop=6;spacingLeft=8" vertex="1" parent="1">
+          <mxGeometry x="810" y="510" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="client_gallery" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=0.5;exitY=1;exitPerimeter=1;entryX=0.5;entryY=0;entryPerimeter=1;" edge="1" parent="1" source="proxyClient" target="gallery">
+          <mxGeometry relative="1" as="geometry">
+
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="client_subject" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="proxyClient" target="displayObject">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="110" />
+              <mxPoint x="430" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gallery_subject" value="image" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=1;exitY=0.3;exitPerimeter=1;entryX=0;entryY=0.72;entryPerimeter=1;" edge="1" parent="1" source="gallery" target="displayObject">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="file_impl" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=block;endFill=0;endSize=18;startArrow=none;startFill=0;startSize=14;exitX=0.5;exitY=0;exitPerimeter=1;entryX=0.25;entryY=1;entryPerimeter=1;" edge="1" parent="1" source="imageFile" target="displayObject">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="448" y="220" />
+              <mxPoint x="538" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="proxy_impl" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=block;endFill=0;endSize=18;startArrow=none;startFill=0;startSize=14;exitX=0.5;exitY=0;exitPerimeter=1;entryX=0.75;entryY=1;entryPerimeter=1;" edge="1" parent="1" source="imageProxy" target="displayObject">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="885" y="220" />
+              <mxPoint x="672" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="proxy_real_subject" value="imageFile" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=0;endArrow=open;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=0;exitY=0.5;exitPerimeter=1;entryX=1;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="imageProxy" target="imageFile">
+          <mxGeometry relative="1" as="geometry">
+
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="proxy_note_link" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;dashed=1;endArrow=none;endFill=0;endSize=14;startArrow=none;startFill=0;startSize=14;exitX=0.55;exitY=1;exitPerimeter=1;entryX=0.4;entryY=0;entryPerimeter=1;" edge="1" parent="1" source="imageProxy" target="proxyNote">
+          <mxGeometry relative="1" as="geometry">
+
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="proxyClient_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="proxyClient">
+          <mxGeometry x="0" y="30" width="170" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="proxyClient_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="proxyClient">
+          <mxGeometry x="0" y="48" width="170" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="proxyClient_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ main(args: String[]): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="proxyClient">
+          <mxGeometry x="0" y="48" width="170" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="gallery_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="gallery">
+          <mxGeometry x="0" y="30" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="gallery_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="gallery">
+          <mxGeometry x="0" y="48" width="230" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gallery_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ show(image: DisplayObject): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="gallery">
+          <mxGeometry x="0" y="48" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="displayObject_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="displayObject">
+          <mxGeometry x="0" y="42" width="270" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="displayObject_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="displayObject">
+          <mxGeometry x="0" y="60" width="270" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="displayObject_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ display(): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="displayObject">
+          <mxGeometry x="0" y="60" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="imageFile_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;- path: String&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="imageFile">
+          <mxGeometry x="0" y="30" width="255" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="imageFile_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="imageFile">
+          <mxGeometry x="0" y="54" width="255" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="imageFile_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ ImageFile(path: String)&lt;br/&gt;- load(): void&lt;br/&gt;+ display(): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="imageFile">
+          <mxGeometry x="0" y="54" width="255" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="imageProxy_attrs" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;- imagePath: String&lt;br/&gt;- imageFile: ImageFile&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="imageProxy">
+          <mxGeometry x="0" y="30" width="310" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="imageProxy_sep" value="" style="shape=line;strokeColor=#000000;html=1;rounded=0;" vertex="1" parent="imageProxy">
+          <mxGeometry x="0" y="70" width="310" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="imageProxy_methods" value="&lt;p style=&quot;margin:0px;margin-left:6px;&quot;&gt;+ ImageProxy(imagePath: String)&lt;br/&gt;+ display(): void&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;spacingTop=4;overflow=hidden;rotatable=0;whiteSpace=wrap;fontSize=12;fontFamily=Times New Roman;" vertex="1" parent="imageProxy">
+          <mxGeometry x="0" y="70" width="310" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
