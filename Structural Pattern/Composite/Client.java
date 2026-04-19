@@ -1,8 +1,5 @@
 package Composite;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class Client {
 
     public static void main(String[] args) {
@@ -13,10 +10,13 @@ public class Client {
         Salesperson peter = new Salesperson("Peter", anna);
         Salesperson sophia = new Salesperson("Sophia", brian);
 
-        List<Manager> managers = Arrays.asList(anna, brian);
-        List<Salesperson> salespersons = Arrays.asList(linda, peter, sophia);
-        
-        Payee salesTeam = new SalesTeam(managers, salespersons);
+        SalesTeam salesTeam = new SalesTeam();
+        salesTeam.addPayee(anna);
+        salesTeam.addPayee(brian);
+        salesTeam.addPayee(linda);
+        salesTeam.addPayee(peter);
+        salesTeam.addPayee(sophia);
+
         salesTeam.payExpenses(500);
     }
 }

@@ -1,24 +1,19 @@
 package Composite;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SalesTeam implements Payee {
-    private List<Manager> managers;
-    private List<Salesperson> salespersons;
+    private final List<Payee> members = new ArrayList<>();
 
-    public SalesTeam(List<Manager> managers, List<Salesperson> salespersons) {
-        this.managers = managers;
-        this.salespersons = salespersons;
+    public void addPayee(Payee payee) {
+        members.add(payee);
     }
-    
+
     @Override
     public void payExpenses(int amount) {
-        for (Manager manager : managers) {
-            manager.payExpenses(amount);
-        }
-        
-        for (Salesperson salesperson : salespersons) {
-            salesperson.payExpenses(amount);
+        for (Payee member : members) {
+            member.payExpenses(amount);
         }
     }
 }
